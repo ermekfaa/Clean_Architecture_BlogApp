@@ -14,18 +14,23 @@ class AuthGradientButton extends StatelessWidget {
             AppPallete.gradient2,
             AppPallete.gradient3
           ],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
         ),
+        borderRadius: BorderRadius.circular(10)
       ),
       child: ElevatedButton(
         onPressed: () {}, 
-        
         style: ElevatedButton.styleFrom(
           fixedSize: const Size(395, 55),
-          backgroundColor: Colors.transparent,
+          backgroundColor: AppPallete.transparentColor,
+          shadowColor: AppPallete.transparentColor,
         ),
-        child: const Text("Sign Up", style: TextStyle(
-          fontSize: 17,
-          fontWeight: FontWeight.w600,
+        child: const Text(
+          "Sign Up", 
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
