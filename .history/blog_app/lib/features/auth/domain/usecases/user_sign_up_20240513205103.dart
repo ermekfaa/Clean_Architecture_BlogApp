@@ -6,10 +6,9 @@ import 'package:fpdart/fpdart.dart';
 class UserSignUp implements UseCase<String, UserSignUpParams> {
   final AuthRepository authRepository;
   const UserSignUp(this.authRepository);
-
   @override
   Future<Either<Failure, String>> call(UserSignUpParams params) async {
-    return await authRepository.signUpWithEmailPassword(
+    authRepository.signUpWithEmailPassword(
       name: params.name,
       email: params.email,
       password: params.password,
